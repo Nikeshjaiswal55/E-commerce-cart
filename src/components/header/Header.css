@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Poppins:wght@300;500&display=swap');
+
+:root{
+    --icon-color: #ffa700;
+    --color-green-primary: mediumseagreen;
+
+}
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    margin-left: -22rem;
+    width: 24rem;
+    max-height: 20rem;
+    overflow: auto;
+}
+.navbar-brand{
+    color: var(--icon-color)!important;
+    font-size: 4rem !important;
+}
+
+
+.cart_hover:hover{
+    display: block;
+}
+
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0rem !important;
+}
+
+.header_logo{
+    font-family: 'Dongle', sans-serif;
+    font-weight: 500;
+}
+
+.header_height{
+    height: 5rem;
+    position: fixed !important;
+    z-index: 111111;
+    width: 100%;
+}
+
+.header_icon{
+    font-size: 30px;
+    color: var(--icon-color);
+}
+
+.counter{
+    border: 10px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: 16px;
+    border-color: var(--color-green-primary);
+}
+
+.counter2{
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 22px;
+    z-index: 11111111111111;
+}
+.pop_over{
+    width: 31rem;
+}
+
+.image_cart_size_pop{
+    height: 3rem;
+}
+
+
+
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
