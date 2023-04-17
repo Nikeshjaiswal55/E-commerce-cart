@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <div className="footer-basic">
+        <div className="footer_basic">
         <div>
             <div className="social"><><i className="icon ion-social-instagram"></i></><><i className="icon ion-social-snapchat"></i></>< ><i className="icon ion-social-twitter"></i></>< ><i className="icon ion-social-facebook"></i></></div>
             <ul className="list-inline">

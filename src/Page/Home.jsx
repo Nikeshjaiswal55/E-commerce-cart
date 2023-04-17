@@ -10,25 +10,25 @@ import Footer from '../components/footer/Footer';
 
 
 const Home = () => {
-    const {data , isLoading,isFetching} = useGetClothsProductsQuery();
+    const { data, isLoading, isFetching } = useGetClothsProductsQuery();
     return (
         <div className='container-fluid p-0'>
             <BannerSlider />
             <ProductHeading heading={"Top Sales Product"} bgcolor={'h-green'} />
             <div className='justify-content-center justify-content-lg-around row'>
-                {isLoading||isFetching?<><Loader/></>:data?.slice(0,3)?.map((contents,index)=> (
+                {isLoading || isFetching ? <><Loader /></> : data?.slice(0, 3)?.map((contents, index) => (
                     <ProductCard key={index} id={index} image={contents.image} name={contents.name} price={contents.price} disc={contents.description} timeLeft={contents.timeLeft} rating={contents.rating} />
                 ))}
             </div>
             <ProductHeading heading={"Amazing offers"} bgcolor={'h-red'} />
             <AdvertiseSlider />
-          <ProductHeading heading={"Trending Products"} bgcolor={'h-green'} />
-          <div className='product_grid row'>
-                {isLoading||isFetching?<><Loader/></>:data?.slice(3,12)?.map((contents,index)=> (
-                    <ProductCard key={index} id={index} image={contents.image} name={contents.name} price={contents.price} disc={contents.description} timeLeft={contents.timeLeft}rating={contents.rating} />
+            <ProductHeading heading={"Trending Products"} bgcolor={'h-green'} />
+            <div className='product_grid row'>
+                {isLoading || isFetching ? <><Loader /></> : data?.slice(3, 12)?.map((contents, index) => (
+                    <ProductCard key={index} id={index} image={contents.image} name={contents.name} price={contents.price} disc={contents.description} timeLeft={contents.timeLeft} rating={contents.rating} />
                 ))}
             </div>
-            <Footer/>
+            <Footer />
         </div>
 
     );
