@@ -13,7 +13,8 @@ import ProductCart from '../product-detail/ProductCart';
 
 function Header() {
     const expand = 'xl';
-    const count=useSelector((item)=>item.product.cart)
+    const cartItem=useSelector((item)=>item.product.cartItem)
+
     return (
         <>
             <Navbar key={expand} bg="light" expand={expand} className="header_height">
@@ -41,7 +42,7 @@ function Header() {
                                 <NavLink to="/cart"> <div className='position-relative'>
                                         <FaShoppingCart className='header_icon' />
                                         <span className='counter'></span>
-                                        <span className='counter2 text-light'>{count.length}</span>
+                                        <span className='counter2 text-light'>{cartItem}</span>
                                     </div></NavLink >
 
                                     <div className='dropdown-menu'><ProductCart /></div>

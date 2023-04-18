@@ -11,6 +11,7 @@ import Footer from '../components/footer/Footer';
 
 const Home = () => {
     const { data, isLoading, isFetching } = useGetClothsProductsQuery();
+
     return (
         <div className='container-fluid p-0'>
             <BannerSlider />

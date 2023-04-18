@@ -18,10 +18,13 @@ const CartDetail = () => {
                 <div className='col-3'>
                     <h3 className='text-center font-size'>price</h3>
                 </div>
-                <div className='col-3'>
+                <div className='col-2'>
                     <h3 className='text-center font-size'>Quantity</h3>
                 </div>
-                <div className='col-3 d-flex justify-content-around'>
+                <div className='col-2'>
+                    <h3 className='text-center font-size'>Sub Total</h3>
+                </div>
+                <div className='col-2 d-flex justify-content-around'>
                 <button className='btn btn-danger butn_size' onClick={()=>dispatch(Remove_all())}>Clear Cart X</button>
                 </div>
             </div>
@@ -35,11 +38,14 @@ const CartDetail = () => {
                         <div className='col-3 d-flex align-items-center justify-content-center  '>
                             <h4 className='text-center font-size'>₹ {item.price}</h4>
                         </div>
-                        <div className='col-3 d-flex align-items-center justify-content-center'>
+                        <div className='col-2 d-flex align-items-center justify-content-center'>
                             <h4 className='text-center font-size'>{item.quantity}</h4>
                         </div>
-                        <div className='col-3 d-flex align-items-center justify-content-center'>
-                            <h4 className='text-center cursor-pointer' onClick={()=>dispatch(Remove_cart(item.id))}><MdDelete className='header_icon' /></h4>
+                        <div className='col-2 d-flex align-items-center justify-content-center'>
+                            <h4 className='text-center font-size'>{item.price * item.quantity}</h4>
+                        </div>
+                        <div className='col-2 d-flex align-items-center justify-content-center'>
+                            <h4 className='text-center cursor-pointer' onClick={()=>dispatch(Remove_cart({id:item.id,q:item.quantity}))}><MdDelete className='header_icon' /></h4>
                         </div>
                     </div></>) : <div className='d-flex justify-content-center p-5'><h3>Empty Cart</h3></div>
             }
@@ -49,10 +55,10 @@ const CartDetail = () => {
                     <button className='btn btn-success'>CheckOut Now</button>
                 </div>
                 <div className='div-cart text-light col-lg-6 col-12 '>
-                    <h5 className='font-size'>Total Amount : ₹ {data?.reduce((prev, curr) => prev + curr.price, 0)}</h5>
+                    <h5 className='font-size'>Total Amount : ₹ {data?.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0)}</h5>
                     <h5>Shipping Charge : ₹ {data?.length*30}</h5>
                     <hr/>
-                    <h5 className='font-size'>Total : ₹ { data?.reduce((prev, curr) => prev + curr.price, 0) + data?.length*30 } /-</h5>
+                    <h5 className='font-size'>Total : ₹ { data?.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0) + data?.length*30 } /-</h5>
                 </div>
             </div>
         </div>

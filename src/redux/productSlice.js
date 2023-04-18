@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 
 const initialState = {
   cart:localStorage.getItem("cartData")?JSON.parse(localStorage.getItem("cartData")):[],
+  cartItem:0
 }
 
 export const productSlice = createSlice({
@@ -14,13 +15,15 @@ export const productSlice = createSlice({
         const itemIndex=state.cart.findIndex(item=>item.id===action.payload.id)
         if(itemIndex>=0){
             state.cart[itemIndex].quantity +=1;
+            state.cartItem +=1;
             toast.info('Increase the quantity of product!!', {
               position:"bottom-center"
           });
         }
         else{
             const temProduct={...action.payload,quantity:1}
-            state.cart.push(temProduct)
+            state.cart.push(temProduct);
+            state.cartItem +=1;
             toast.success('Added to Cart', {
               position:"bottom-center"
           });
@@ -28,7 +31,10 @@ export const productSlice = createSlice({
         localStorage.setItem("cartData",JSON.stringify(state.cart))
     },
     Remove_cart(state,action){
-         state.cart= state.cart.filter(item=>item.id!==action.payload)
+      // const item = state.cart.filter(i=> i.id=== action.payload);
+         state.cart= state.cart.filter(item=>item.id!==action.payload.id);
+          // console.log(item);
+         state.cartItem -= action.payload.q;
          localStorage.setItem("cartData",JSON.stringify(state.cart))
          toast.error('Product Removed!', {
           position:"bottom-center"     
@@ -36,6 +42,7 @@ export const productSlice = createSlice({
     },
     Remove_all(state){
         state.cart=[];
+        state.cartItem = 0;
         localStorage.setItem("cartData",JSON.stringify(state.cart))
         toast.warning('Cart Clear Successfull !', {
           position:"bottom-center"     

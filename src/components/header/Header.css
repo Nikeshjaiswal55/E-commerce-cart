@@ -12,6 +12,7 @@
     width: 24rem;
     max-height: 20rem;
     overflow: auto;
+    padding-bottom: 0 !important;
 }
 
 .navbar-brand{
