@@ -1,68 +1,46 @@
 # Online Link for visit
-
 netlify :- https://cognisun-nikesh.netlify.app/
 
+# STEP BY STEP PROCESS TO CREATE THESE PROJECT
 
+In this article, we will explore how to create a robust e-commerce cart using React.js, Redux, RTK-Query, and the Bootstrap library. Our project aims to display products to users by leveraging third-party APIs and utilizing RTK-Query for efficient data fetching. With Redux, we will manage the application's data, enabling us to perform CRUD operations such as deleting, removing, adding, and updating product quantities. Let's dive into the details!
 
+# Setting Up the Environment:
+1.Install Node.js and npm.
+2.Create a new React.js project with Create React App.
+3.Install dependencies: Redux, RTK-Query, Bootstrap, and other required packages.
 
-# Getting Started with Create React App
+# Fetching Product Data with RTK-Query:
+1.Utilize RTK-Query to fetch product data from a third-party API.
+2.Define endpoints to retrieve product details, including images, descriptions, and pricing.
+3.Leverage the power of RTK-Query's caching mechanism for optimized data fetching.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Managing Application State with Redux:
+1.Set up Redux to manage the application's global state.
+2.Create reducers, actions, and selectors for handling cart-related operations.
+3.Use Redux Toolkit to streamline the development process.
 
-## Available Scripts
+# Implementing CRUD Operations:
+1.Enable the ability to add products to the cart, remove items, and update quantities.
+2.Define Redux actions and reducers to perform these operations.
+3.Keep the application state in sync with user interactions.
 
-In the project directory, you can run:
+# Styling with Bootstrap:
+1.Utilize the Bootstrap library for a clean and responsive user interface.
+2.Leverage Bootstrap components to create an appealing and user-friendly cart design.
+3.Customize the styles to align with the overall theme of your e-commerce application.
 
-### `npm start`
+# Conclusion:
+In this article, we explored the process of building an efficient e-commerce cart using React.js, Redux, RTK-Query, and Bootstrap. By leveraging RTK-Query, we fetched product data from a third-party API and efficiently managed data fetching. With Redux, we maintained a centralized application state and performed CRUD operations seamlessly. Additionally, Bootstrap empowered us to create an aesthetically pleasing and responsive cart layout. By mastering these techniques, you can develop impressive e-commerce carts that provide a seamless shopping experience for your users. Happy coding!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# SCREENSHOTS:- 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/Nikeshjaiswal55/E-commerce-cart/assets/108169238/5a40fb7b-7794-4e2b-b8b7-74597818dc62)
 
-### `npm test`
+![image](https://github.com/Nikeshjaiswal55/E-commerce-cart/assets/108169238/5d6f7d6d-f14b-4261-9b97-1d11e861d138)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/Nikeshjaiswal55/E-commerce-cart/assets/108169238/9460b615-98ac-45a9-848e-f958341e2c4d)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
 ### Advanced Configuration
 
